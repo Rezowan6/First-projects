@@ -1,0 +1,326 @@
+:root{
+    --primary:lime;
+    --normol: #fff;
+    --bg: #000;
+    --btn: linear-gradient(blueviolet,blue);
+    --hover-color: linear-gradient(aqua,lime);
+    --border-btm: aqua;
+    --border-img: linear-gradient(cyan,blue) 0 100%;
+    --container_lg: 87%;
+    --container_ml: 90%;
+    --container_sm: 95%;
+}
+
+/*===universal section start=== */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-style: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    z-index: 1000;
+    color: var(--normol);
+    transition: all 1s linear;
+}
+body{
+    background-color: var(--bg);
+}
+.container{
+    width: var(--container_lg);
+    margin: 0 auto;
+}
+h1{
+    width: fit-content;
+    height: fit-content;
+    color: var(--normol);
+    font-size: 3rem;
+}
+h2{
+    width: fit-content;
+    height: fit-content;
+    color: var(--normol);
+    font-size: 2rem;
+}
+h2:hover{
+    color: var(--primary);
+    border-bottom: 1px solid var(--border-btm);
+}
+h4{
+    font-size: 2rem;
+}
+span{
+    color: var(--primary);
+}
+.btn{
+    padding: 10px 1.1rem;
+    background-image: var(--btn);
+    border-radius: 0.7rem;
+    cursor: pointer;
+}
+.btn:hover{
+    background: var(--hover-color);
+}
+/*===universal section end=== */
+
+/*===navbar section start=== */
+.nav_container{
+    display: flex;
+    height: 6rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-img);
+}
+.nav_menu{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 0.4rem;
+
+}
+.nav_menu:hover{
+    border: 1px solid var(--normol);
+}
+.nav_menu li{
+    padding: 0 2rem;
+}
+.nav_menu li a:hover{
+    margin: 0.2rem 0;
+    color: var(--primary);
+}
+/*===navbar section end=== */
+
+
+/*===header section start===*/
+
+.header_container{
+    position: relative;
+    display: flex;
+    height: 35rem;
+    background-image: url(flowers/123Z_2101.w020.n001.947B.p15.947.jpg);
+    z-index: 0;
+    background-size: cover;
+    justify-content: space-between;
+    align-items: center;
+    top: 5rem;
+    display: flex;
+}
+.header_left{
+    position: relative;
+    top: -9rem;
+}
+.header_right{
+    position: relative;
+    top: 11rem;
+}
+.header_right p{
+    width: 32rem;
+    height: fit-content;
+}
+/*===header section end===*/
+
+/*===speciallizing section start===*/
+
+.special_container{
+    position: relative;
+    top: 8rem;
+}
+.special_container p{
+    width: 28rem;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+}
+.special_container h2{
+    margin: auto;
+}
+/*===speciallizing section end===*/
+
+
+/*===card section start===*/
+.card_container{
+    position: relative;
+    top: 10rem;
+}
+
+.all_card{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3,1fr);
+    padding: 10%;
+}
+.card{
+    border-left: 3px solid;
+    border-image: var(--border-img);
+    padding: 2.8rem;
+    box-shadow: 10px 5px 40px rgb(100, 4, 254);
+    border-radius:  0 12px 50px 0;
+}
+/* ===card section end===*/
+
+/*===meadia query tablet device===*/
+
+@media screen and (max-width: 1024px) {
+    .container{
+        width: var(--container_ml);
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h4{
+        font-size: 1.5rem;
+    }
+
+    /*===navbar section start=== */
+    .nav_container{
+        height: 5rem;
+    }
+    .nav_menu{
+         gap: 0.8rem;
+        font-size: 1.3rem;
+
+    }
+    .nav_menu li{
+        padding: 0 1.6rem;
+    }
+    .nav_menu li a:hover{
+        margin: 0.1rem 0;
+    }
+/*===navbar section end=== */
+
+/*===header section start===*/
+
+    .header_container{
+        height: 34rem;
+        top: 4rem;
+    }
+    .header_left{
+        position: relative;
+        top: -9rem;
+    }
+    .header_right{
+        top: 10rem;
+    }
+    .header_right p{
+        width: 31rem;
+    }
+    /*===header section end===*/
+
+    /*===speciallizing section start===*/
+
+    .special_container{
+        top: 7rem;
+    }
+    .special_container p{
+        width: 27rem;
+    }
+    /*===speciallizing section end===*/
+
+        /*===card section start===*/
+    .card_container{
+        top: 9rem;
+    }
+
+    .all_card{
+        gap: 1.6rem;
+        padding: 9%;
+    }
+    .card{
+        padding: 2.1rem;
+    }
+    /* ===card section end===*/
+}
+
+
+/*===meadia query mobail device===*/
+    @media screen and (max-width:600px) {
+        .container{
+            width: var(--container_sm);
+        }
+        h1{
+            font-size: 1rem;
+        }
+        h2{
+            font-size: 1.3rem;
+        }
+        h4{
+            font-size: 1.3rem;
+        }
+        .btn{
+            padding: 6px 0.7rem;
+        }
+    
+        /*===navbar section start=== */
+        .nav_container{
+            height: 5rem;
+        }
+        .nav_menu{
+             gap: 0.3rem;
+            font-size: 0.6rem;
+    
+        }
+        .nav_menu li{
+            padding: 5px 1rem;
+        }
+        .nav_menu li a:hover{
+            margin: 0.1rem 0;
+        }
+    /*===navbar section end=== */
+    
+    /*===header section start===*/
+    
+        .header_container{
+            height: 30rem;
+            top: 2rem;
+        }
+        .header_left{
+            top: -6rem;
+        }
+        .header_right{
+            top: 6rem;
+        }
+        .header_right p{
+            width: 15rem;
+            font-size: 12px;
+        }
+        /*===header section end===*/
+    
+        /*===speciallizing section start===*/
+    
+        .special_container{
+            top: 3rem;
+        }
+        .special_container p{
+            width: 20rem;
+            font-size: 12px;
+        }
+        /*===speciallizing section end===*/
+    
+            /*===card section start===*/
+        .card_container{
+            top: 4rem;
+        }
+    
+        .all_card{
+            gap: 0.6rem;
+            padding: 7%;
+        }
+        .card{
+            padding: 1rem;
+        }
+        .card h3{
+            font-size: 10px;
+        }
+        .card p{
+            font-size: 10px;
+        }
+        /* ===card section end===*/
+    }
+
+
+
+
